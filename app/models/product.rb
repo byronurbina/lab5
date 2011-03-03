@@ -21,7 +21,7 @@ after_destroy : metodo3
 	end
 	
 	def metodo2
-		anterior = regAnt =Inventory.where("product_id = :id").last
+		anterior =Inventory.where("product_id = :id").last
 		nuevo = Inventory.new
 		nuevo.previous_balance = anterior.new_balance
 		nuevo.new_balance = ammount
